@@ -25,7 +25,7 @@ export async function init(url: string, branch: string): Promise<void> {
 }
 
 export async function update(src: string, clean = true): Promise<void> {
-  if (clean) await git(`rm -r --ignore-unmatch '*'`);
+  
   await io.cp(`${src}/.`, `${cwd}/.`, { recursive: true });
 }
 
